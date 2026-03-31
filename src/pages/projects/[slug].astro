@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry, getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+
+  return projects.map((project) => ({
+    params: { slug: project.id },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = await getEntry('projects', slug);
+---
+
+<Layout>
+  <article class="project-content max-w-none">
+    <header class="space-y-4">
+      <div class="flex flex-wrap items-center gap-3 text-sm text-slate-600">
+        <a href="/portfolio" class="hover:text-slate-900">
+          返回作品集
+        </a>
+        {project.data.year ? <span>• {project.data.year}</span> : null}
+      </div>
+
+      <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+        {project?.data.title}
+      </h1>
+      {project?.data.description ? (
+        <p class="text-slate-700">{project.data.description}</p>
+      ) : null}
+
+      {project?.data.tags && project.data.tags.length ? (
+        <div class="flex flex-wrap gap-2">
+          {project.data.tags.map((t) => (
+            <span
+              class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      ) : null}
+    </header>
+
+    <div class="mt-8">
+      {project ? render(project) : null}
+    </div>
+  </article>
+</Layout>
+

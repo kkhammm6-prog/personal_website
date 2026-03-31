@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="space-y-6">
+    <div>
+      <h1 class="text-2xl font-semibold tracking-tight">关于我</h1>
+      <p class="mt-3 text-sm leading-7 text-slate-700">
+        这里写你的个人介绍：经历、兴趣、价值观、以及你如何看待“作品集”。
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="rounded-2xl border border-slate-200 bg-white/60 p-5">
+        <h2 class="text-base font-semibold">技能方向</h2>
+        <p class="mt-2 text-sm leading-7 text-slate-700">
+          前端开发 / 交互设计 / 性能优化 / 组件化工程 等（替换为你的实际情况）
+        </p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white/60 p-5">
+        <h2 class="text-base font-semibold">合作方式</h2>
+        <p class="mt-2 text-sm leading-7 text-slate-700">
+          你希望如何协作：需求沟通、原型、实现、迭代。（后续你可以加更细）
+        </p>
+      </div>
+    </div>
+
+    <section class="rounded-2xl border border-slate-200 bg-white/60 p-5">
+      <h2 class="text-base font-semibold">联系我</h2>
+      <p class="mt-2 text-sm leading-7 text-slate-700">
+        如果你需要联系，后面我可以帮你把 `Formspree` 表单接上（GitHub Pages 静态站支持）。
+      </p>
+
+      <div class="mt-4">
+        <a
+          href="/portfolio"
+          class="inline-flex items-center rounded-full border border-slate-300 bg-white/70 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-white"
+        >
+          先看看我的作品
+        </a>
+      </div>
+    </section>
+  </section>
+</Layout>
+

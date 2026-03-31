@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* 全局基础样式：让页面在你后续替换内容/颜色时更统一 */
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-content h2 {
+  @apply mt-8 text-lg font-semibold tracking-tight;
+}
+
+.project-content h3 {
+  @apply mt-6 text-base font-semibold tracking-tight;
+}
+
+.project-content p {
+  @apply mt-3 text-sm leading-7 text-slate-700;
+}
+
+.project-content ul {
+  @apply mt-3 list-disc pl-5;
+}
+
+.project-content li {
+  @apply mt-1 text-sm leading-7 text-slate-700;
+}
+
+.project-content code {
+  @apply rounded bg-slate-100 px-1 py-0.5 text-[12px];
+}
+
+.project-content pre {
+  @apply mt-4 overflow-auto rounded bg-slate-950 p-4 text-slate-100;
+}

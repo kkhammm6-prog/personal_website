@@ -3,36 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<Layout>
+<Layout showNav={false} showFooter={false} fullBleed={true}>
   <Hero />
-
-  <section class="mt-10 grid gap-4 sm:grid-cols-2">
-    <div class="rounded-2xl border border-slate-200 bg-white/60 p-5">
-      <h2 class="text-base font-semibold">我是谁</h2>
-      <p class="mt-2 text-sm leading-7 text-slate-700">
-        在这里写一句你的定位：例如“前端开发 / UI 设计 / 产品探索”等。
-      </p>
-    </div>
-    <div class="rounded-2xl border border-slate-200 bg-white/60 p-5">
-      <h2 class="text-base font-semibold">我能做什么</h2>
-      <p class="mt-2 text-sm leading-7 text-slate-700">
-        简短列出你的优势：例如 Web 交互、组件化、性能优化、设计协作。
-      </p>
-    </div>
-  </section>
-
-  <section class="mt-8 flex flex-wrap gap-3">
-    <a
-      href="/portfolio"
-      class="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
-    >
-      查看作品集
-    </a>
-    <a
-      href="/about"
-      class="inline-flex items-center rounded-full border border-slate-300 bg-white/70 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-white"
-    >
-      了解更多
-    </a>
-  </section>
 </Layout>

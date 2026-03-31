@@ -360,7 +360,7 @@ export function FaultyTerminalBackground({
       if (pageLoadAnimation && loadAnimationStartRef.current > 0) {
         const animationDuration = 2000.0;
         const animationElapsed = t - loadAnimationStartRef.current;
-        const progress = min(animationElapsed / animationDuration, 1.0);
+        const progress = Math.min(animationElapsed / animationDuration, 1.0);
         program.uniforms.uPageLoadProgress.value = progress;
       }
 

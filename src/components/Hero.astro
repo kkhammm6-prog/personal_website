@@ -1,6 +1,5 @@
 ---
-// 这个 Hero 组件是“占位骨架”：
-// 你后续可以把自己的交互代码直接替换/扩展到这里（包括 JS、React、纯前端动画等）。
+import FaultyTerminalBackground from './FaultyTerminalBackground.tsx';
 ---
 
 <section class="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-white p-6 sm:p-10">
@@ -34,11 +33,24 @@
     </div>
   </div>
 
-  {/* 你可以把你的交互 Hero 代码放到这里（例如挂载点或直接替换整个 section） */}
-  <div id="hero-interactive" class="pointer-events-none absolute inset-0 z-0"></div>
-
-  {/* 背景装饰（你也可以删掉） */}
-  <div aria-hidden="true" class="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-indigo-100 blur-3xl"></div>
-  <div aria-hidden="true" class="pointer-events-none absolute -bottom-28 -left-24 h-96 w-96 rounded-full bg-emerald-100 blur-3xl"></div>
+  <FaultyTerminalBackground
+    client:only="react"
+    className="pointer-events-none absolute inset-0 z-0"
+    scale={1.2}
+    gridMul={[2, 1]}
+    digitSize={1.5}
+    timeScale={0.3}
+    scanlineIntensity={0.35}
+    glitchAmount={1}
+    flickerAmount={1}
+    noiseAmp={1}
+    chromaticAberration={0}
+    dither={0.5}
+    curvature={0.25}
+    tint="#8b5cf6"
+    mouseReact={true}
+    mouseStrength={0.25}
+    pageLoadAnimation={true}
+    brightness={1}
+  />
 </section>
-

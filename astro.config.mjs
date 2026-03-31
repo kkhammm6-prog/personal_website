@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import mdx from '@astrojs/mdx';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   // GitHub Pages 直接部署静态文件：开启 static output
@@ -17,5 +19,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [mdx()]
+  integrations: [mdx(), react()]
 });
